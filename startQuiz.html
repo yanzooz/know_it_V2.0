@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="image\Logo.PNG" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>KNOW IT!</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="flagDisplayFR" class="flag-display">
+        <img src="image\FR-icone.png" alt="flagFR" />
+      </div>
+      <div id="flagDisplayUK" class="flag-display" >
+        <img src="image\UK-icone.png" alt="flagUK" />
+      </div>
+      <div id="titleHeader">
+        <h1>KNOW IT!</h1>
+      </div>
+    </header>
+    <div class="dotted-line"></div>
+
+    <main>
+      <section id="themeSelectionMenu">
+        <div id="cityPictureDisplayFR" class="city-picture-display">
+          <img src="image\FR-Cover.jpg" alt="photo de la ville" />
+        </div>
+        <div id="cityPictureDisplayUK" class="city-picture-display">
+          <img
+            src="image\UK-Cover.jpg"
+            alt="photo de la ville"
+          />
+        </div>
+        <h2>Choix du thème</h2>
+        <select title="themeSelect" id="themeSelect" class="language-select">
+        </select>
+        <button type="button" id="fromQuizSettingToInGame">Démarrer</button>
+      </section>
+      <div class="dotted-line"></div>
+
+      <section id="gameSetting">
+        <p>Paramètre de la partie</p>
+        <div id="containerSetting">
+          <div id="settingVolume">
+            <img id="volumeOff" src="image\volume-x-svgrepo-com.svg" alt="volume désactivé" />
+            <img id="volumeOn" src="image\volume-high-svgrepo-com.svg" alt="volume activé" />
+          </div>
+          <button type="button" id="quit">Quitter</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="dotted-line"></div>
+    <footer>
+      <p>© 2024 Yanzooz. Tous droits réservés.</p>
+    </footer>
+    <audio id="correct-audio" src="image\GoodAnswer.mp3"></audio>
+    <audio id="incorrect-audio" src="image\WrongAnswer.mp3"></audio>
+    <script src="src/startQuiz.js" type="module"></script>
+  </body>
+</html>

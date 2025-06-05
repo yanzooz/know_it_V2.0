@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="image\Logo.PNG" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>KNOW IT!</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="flagDisplayFR" class="flag-display">
+        <img src="image\FR-icone.png" alt="flagFR" />
+      </div>
+      <div id="flagDisplayUK" class="flag-display">
+        <img src="image\UK-icone.png" alt="flagUK" />
+      </div>
+      <div id="titleHeader">
+        <h1>KNOW IT!</h1>
+      </div>
+    </header>
+    <div class="dotted-line"></div>
+
+    <main>
+      <section id="languageSelectionMenu">
+        <div id="cityPictureDisplayFR" class="city-picture-display">
+          <img src="image\FR-Cover.jpg" alt="photo de la ville" />
+        </div>
+        <div id="cityPictureDisplayUK" class="city-picture-display">
+          <img
+            src="image\UK-Cover.jpg"
+            alt="photo de la ville"
+          />
+        </div>
+        <h2>Sélectionnez votre langue d'apprentissage</h2>
+        <select title="languageSelect" id="languageSelect" class="language-select">
+          <option value="french">Francais</option>
+          <option value="english">Anglais</option>
+        </select>
+        <button type="button" id="buttonFromMenuToQuizSetting">
+          Continuer
+        </button>
+      </section>
+      <div class="dotted-line"></div>
+
+      <section id="historicUserMenu">
+        <p>Score précédent :</p>
+        <div id="previousUserScore"><p id="historicScoreUser">23</p><p  id="displayStillNoScore">/</p><p id="historicScoreMax">30</p></div>
+        <button type="button" id="buttonFromMenuToHistoric">
+          Voir l'historique
+        </button>
+      </section>
+    </main>
+
+    <div class="dotted-line"></div>
+    <footer>
+      <p>© 2024 Yanzooz. Tous droits réservés.</p>
+    </footer>
+
+    <script src="src/script.js" type="module"></script>
+  </body>
+</html>
+

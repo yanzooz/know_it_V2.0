@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="image\Logo.PNG" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>KNOW IT!</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="flagDisplayFR" class="flag-display">
+        <img src="image\FR-icone.png" alt="flagFR" />
+      </div>
+      <div id="flagDisplayUK" class="flag-display">
+        <img src="image\UK-icone.png" alt="flagUK" />
+      </div>
+      <div id="titleHeader">
+        <h1>KNOW IT!</h1>
+      </div>
+    </header>
+    <div class="dotted-line"></div>
+
+    <main>
+      <section id="displayScoreOnly">
+        <section id="languageSelectionMenu">
+          <div id="cityPictureDisplayFR" class="city-picture-display">
+            <img src="image\FR-Cover.jpg" alt="photo de la ville" />
+          </div>
+          <div id="cityPictureDisplayUK" class="city-picture-display">
+            <img
+              src="image\UK-Cover.jpg"
+              alt="photo de la ville"
+            />
+          </div>
+          <h2>Partie terminée ! Votre score est de : </h2>
+        </section>
+
+        <section id="displayScore">
+          <div class="score-container">
+              <p class="score-title">Your Score</p>
+              <div class="score-value"><p id="scoreUser">29</p>/<p id="scoreMax">30</p></div>
+          </div>
+        </section>
+      </section>
+
+      <section id="historicDisplay">
+        <h2>Historique</h2>
+        <div class="historic-container">
+          <ul id="listHistoric">
+          </ul>
+        </div>
+      </section>
+
+        <section id="listButton">
+          <button type="button" id="toMenu" class="blue-button">Menu</button>
+          <button type="button" id="toHistoric">Voir l'Historique</button>
+        </section>
+      
+
+    </main>
+
+    <div class="dotted-line"></div>
+    <footer>
+      <p>© 2024 Yanzooz. Tous droits réservés.</p>
+    </footer>
+
+    <script src="src/score.js" type="module"></script>
+  </body>
+</html>
+

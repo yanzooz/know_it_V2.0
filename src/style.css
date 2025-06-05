@@ -1,0 +1,518 @@
+:root {
+  --main-font: "Rasa", serif;
+  --second-font: "Fredoka", serif;
+  --background-color: #252c49;
+  --main-color: #8d96b8;
+  --blue-button: #127eeb;
+  --red-button: #f02532;
+  --pink-color: #fa5170;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.dotted-line {
+  border-top: 2px dotted var(--main-color);
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.language-select {
+  font-family: var(--second-font);
+  width: 100%;
+  padding: 1rem;
+  margin: 2rem 0rem;
+  font-size: 20px;
+  border: 2px rgb(214, 214, 214) solid;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s ease-in-out;
+  background-image: url("image/chevron-down-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  margin-left: 1rem;
+}
+.language-select:hover {
+  background: linear-gradient(135deg, #e6e6e6, #cccccc);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-select:focus {
+  outline: none;
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 6px var(--blue-button);
+}
+
+.language-select option {
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.good-answer {
+  padding: 0.7rem ;
+  margin: 0 1.5rem ;
+  background-color: #75967a ;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 5px 5px 5px black;
+}
+
+.bad-answer {
+  padding: 0.7rem ;
+  margin: 0 1.5rem ;
+  background-color: #922938 ;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 5px 5px 5px black;
+}
+
+.expected-answer{
+  padding: 0.7rem ;
+  margin: 0 1.5rem ;
+  background-color: #7e8290;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 5px 5px 5px black;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--second-font);
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  body {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    margin: 0.2rem;
+    padding: 1rem;
+    width: 25rem;
+
+  }
+  header {
+    display: flex;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    padding: 1rem 1rem;
+    div.flag-display {
+      img {
+        width: 3rem;
+      }
+    }
+    div#titleHeader {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+  main {
+    padding: 0 1rem;
+    margin: 2rem 0rem;
+    section#languageSelectionMenu {
+      margin-top: 2rem;
+      .city-picture-display {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: 222px;
+          opacity: 0.2;
+        }
+      }
+      h2 {
+        z-index: 2;
+        margin-top: -1.5rem;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        position: relative;
+      }
+
+      button {
+        padding: 1rem;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        background-color: var(--blue-button);
+        font-family: var(--second-font);
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+      }
+      button:hover {
+        background-color: #89c4ff;
+      }
+    }
+    section#historicUserMenu {
+      color: white;
+      font-size: 30px;
+      #previousUserScore {
+        display: flex;
+        color: var(--pink-color);
+        margin: 1.5rem 0rem;
+      }
+      button {
+        padding: 1rem;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        background-color: var(--main-color);
+        font-family: var(--second-font);
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+      }
+      button:hover {
+        background-color: #7a7a7a;
+      }
+    }
+    section#themeSelectionMenu {
+      img {
+        width: 100%;
+        opacity: 0.2;
+      }
+      h2 {
+        z-index: 2;
+        margin-top: -1.5rem;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        position: relative;
+
+      }
+      button {
+        padding: 1rem;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        background-color: var(--blue-button);
+        font-family: var(--second-font);
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+      }
+      button:hover {
+        background-color: #89c4ff;
+      }
+    }
+    section#gameSetting {
+      margin: 3rem 0;
+      p {
+        color: white;
+        font-size: 25px;
+        margin: 2rem 0;
+      }
+      div#containerSetting {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          width: 5rem;
+          cursor: pointer;
+          margin: 0 0.5rem;
+        }
+        button {
+          padding: 1rem;
+          border: none;
+          border-radius: 20px;
+          color: white;
+          background-color: var(--red-button);
+          font-family: var(--second-font);
+          font-size: 16px;
+          transition: all 0.3s ease-in-out;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #ff9a9a;
+        }
+      }
+    }
+    section#loading{
+      p {
+        font-size: 1.5rem;
+        color: var(--main-color);
+      }
+      .progress-container {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        margin-bottom: 3.5rem;
+        height: 20px;
+        overflow: hidden;
+        #progressBar {
+          background-color: var(--pink-color);
+          height: 100%;
+          transition: width 0.3s ease;
+          border-radius: 8px;
+          width: 20%;
+        }
+      }
+    }
+
+    section#displayQuestionInGame {
+       p {
+        font-size: 1.5rem;
+        color: var(--main-color);
+      }
+      div#containerQuestion {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        p {
+          font-size: 3rem;
+        }
+        div#question {
+          margin-left: 1rem;
+          color: white;
+          font-size: 2rem;
+        }
+      }
+      input {
+        padding: 0 1rem;
+        width: 100%;
+        height: 3rem;
+        border: 1px solid #ccc;  
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;             
+        box-sizing: border-box;      
+        transition: border-color 0.7s; 
+      }
+      input:focus {
+        outline: none;               
+        border-color: var(--main-color);      
+      }
+      button {
+        padding: 1rem;
+        margin: 1rem;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        background-color: var(--main-color);
+        font-family: var(--second-font);
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #cccccc;
+      }
+    }
+    section#displayCorrectionAnswerInGame {
+      > p {
+        font-size: 1.5rem;
+        color: var(--main-color);
+      }
+      .progress-container {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        margin-bottom: 2rem;
+        height: 20px;
+        overflow: hidden;
+        #progressBar {
+          background-color: var(--pink-color);
+          height: 100%;
+          transition: width 0.3s ease;
+          border-radius: 8px;
+        }
+      }
+
+      div#displayCorrection {
+        p{
+          color: white;
+          font-size: 1.5rem;
+          margin: 2rem 0 1rem 0;
+        }
+      }
+
+      #nextButton{
+        padding: 1rem 1.5rem;
+        margin: 2.5rem 1rem;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        background-color: var(--blue-button);
+        font-family: var(--second-font);
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+      #nextButton:hover{
+        background-color: #89c4ff;
+      }
+    }
+  }
+
+    section#listButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    button{
+      padding: 1rem;
+        margin: 1rem;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        background-color: var(--main-color);
+        font-family: var(--second-font);
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+    button:hover {
+      background-color: #89c4ff;
+    }
+    button.blue-button{
+      background-color: #127eeb;
+    }
+    button:hover {
+      background-color: #89c4ff;
+    }
+
+  }
+    section#displayScore{
+      margin-top: 2rem;
+      .score-container {
+        border: 0.5rem solid #8d96b8 ;
+        background-color: #3d4463;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .score-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .score-value {
+      display: flex;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+
+    #historicDisplay{
+      margin-top: 2rem;
+      h2 {
+        text-align: center;
+        margin: 1.5rem;
+        color: white;
+        font-size: 2rem;
+        text-align: start;
+      }
+    }
+
+    .historic-container {
+      max-height: 500px; /* ajuste si besoin */
+      overflow-y: auto;
+      padding: 1rem 0;
+      background-color:var(--main-color);
+      border-radius: 15px;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Appliquer à un conteneur précis ou globalement */
+      ul {
+        margin-right: 0.2rem;
+        overflow-y: auto;      /* Active la barre verticale si besoin */
+        max-height: 400px;     /* Exemple pour limiter la hauteur */
+        scrollbar-width: thin; /* Pour Firefox */
+        scrollbar-color: white transparent; /* Pour Firefox */
+      }
+
+      /* Pour Webkit (Chrome, Edge, Safari) */
+      ul::-webkit-scrollbar {
+        width: 8px;  /* Largeur de la barre verticale */
+      }
+
+      ul::-webkit-scrollbar-track {
+        background: transparent;  /* Fond de la piste */
+        border-radius: 10px;
+      }
+
+      ul::-webkit-scrollbar-thumb {
+        background-color: white; /* Couleur de la barre mobile */
+        border-radius: 10px;
+        border: 2px solid transparent; /* Petit effet pour espacer un peu */
+      }
+
+      li {
+        padding: 0.5rem;
+        margin: 1.5rem;
+        p {
+          margin: 0.3rem 0;
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+        p:first-child{
+          color: white;
+        }
+      }
+    }
+    /* Styles spécifiques aux bonnes et mauvaises réponses */
+    .historic-container li.good-answer-historic {
+      background-color: #a9cbb2; /* vert clair */
+    }
+
+    .historic-container li.bad-answer-historic {
+      background-color: #e53f4b; /* rouge clair */
+    }
+
+
+footer {
+    font-family: var(--main-font);
+    color: rgba(255, 255, 255, 0.568);
+    padding: 0.5rem 0rem;
+    text-align: center;
+  }
+}
+
+
+.main-color{
+  color: var(--background-color);
+}
+
